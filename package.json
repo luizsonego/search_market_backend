@@ -6,6 +6,7 @@
   "license": "MIT",
   "author": "Luiz Yavorski",
   "scripts": {
+    "start": "ts-node-dev src/server.ts --transpile-only --ignore-watch node_modules --respawn",
     "dev:server": "ts-node-dev src/server.ts --transpile-only --ignore-watch node_modules --respawn",
     "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
   },
