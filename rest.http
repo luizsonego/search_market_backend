@@ -1,0 +1,21 @@
+GET http://localhost:3001/market HTTP/1.1
+
+###
+
+GET http://localhost:3001/market/1 HTTP/1.1
+
+###
+
+POST http://localhost:3001/market HTTP/1.1
+content-type: application/json
+
+{
+    "name": "Feira Central",
+    "latitude": -23.4452752,
+    "longitude": -51.8628407,
+    "about": "Feira muito legal",
+    "days_is_opening": "{1: 7:00},{5:19:00}",
+    "images": [
+        "imagem/"
+    ]
+}b
