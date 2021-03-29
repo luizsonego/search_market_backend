@@ -7,7 +7,7 @@
    "scripts": {
       "dev": "ts-node-dev src/server.ts --transpile-only --ignore-watch node_modules --respawn",
       "test": "jest",
-      "start": "ts-node-dev src/server.ts",
+      "start": "node src/server.ts",
       "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"
    },
    "dependencies": {
