@@ -1,10 +1,10 @@
-import express from 'express'
 import cors from 'cors'
 import 'express-async-errors'
 import routes from './routes'
 import './database/connection'
 
 import errorHandler from './errors/handler'
+const express = require('express')
 
 const port = process.env.PORT || 3001
 const app = express()
