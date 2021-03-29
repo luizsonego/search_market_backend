@@ -13,4 +13,4 @@ app.use(express.json())
 app.use(errorHandler)
 app.use(routes)
 
-app.listen(3001)
+app.listen(process.env.PORT || 3001)
