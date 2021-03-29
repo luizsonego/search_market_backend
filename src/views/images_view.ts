@@ -1,14 +1,14 @@
-import Image from "../models/Image";
+import Image from '../entity/Image'
 
 export default {
-  render(image: Image) {
+  render (image: Image) {
     return {
       id: image.id,
-      path: `http://localhost:3001/uploads/${image.path}`,
-    };
+      path: `http://localhost:3001/uploads/${image.path}`
+    }
   },
 
-  renderMany(images: Image[]) {
-    return images.map((image) => this.render(image));
-  },
-};
+  renderMany (images: Image[]) {
+    return images.map((image) => this.render(image))
+  }
+}
