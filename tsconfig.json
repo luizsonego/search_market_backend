@@ -1,8 +1,6 @@
 {
   "compilerOptions": {
-    "lib": ["es6"],
-    "target": "es6",
-    "module": "commonjs",
+    "target": "ES2019",
     "moduleResolution": "node",
     "outDir": "./dist",
     "rootDir": "./src",
@@ -15,7 +13,8 @@
     "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
     "strictNullChecks": false,
-  },
-  "include": ["src/**/*.ts"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+    "paths": {
+      "@/*": ["./*"]
+    },
+  }
 }
