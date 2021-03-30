@@ -5,7 +5,6 @@ import {
   OneToMany,
   JoinColumn
 } from 'typeorm'
-import Image from './Image'
 
 @Entity('Market')
 export default class Market {
@@ -86,10 +85,4 @@ export default class Market {
 
   @Column()
   satEnd: string
-
-  @OneToMany(() => Image, (image) => image.market, {
-    cascade: ['insert', 'update']
-  })
-  @JoinColumn({ name: 'market_id' })
-  images: Image[];
 }

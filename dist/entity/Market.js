@@ -7,8 +7,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany, JoinColumn } from 'typeorm';
-import Image from './Image';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 let Market = class Market {
 };
 __decorate([
@@ -115,13 +114,6 @@ __decorate([
     Column(),
     __metadata("design:type", String)
 ], Market.prototype, "satEnd", void 0);
-__decorate([
-    OneToMany(() => Image, (image) => image.market, {
-        cascade: ['insert', 'update']
-    }),
-    JoinColumn({ name: 'market_id' }),
-    __metadata("design:type", Array)
-], Market.prototype, "images", void 0);
 Market = __decorate([
     Entity('Market')
 ], Market);
