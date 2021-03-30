@@ -1,5 +1,7 @@
-export default {
-    render(market) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = {
+    render: function (market) {
         return {
             id: market.id,
             name: market.name,
@@ -29,8 +31,8 @@ export default {
             satEnd: market.satEnd
         };
     },
-    renderMany(market) {
-        return market.map((market) => this.render(market));
+    renderMany: function (market) {
+        var _this = this;
+        return market.map(function (market) { return _this.render(market); });
     }
 };
-//# sourceMappingURL=market_view.js.map

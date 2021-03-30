@@ -1,3 +1,4 @@
+"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -7,35 +8,38 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-let Developers = class Developers {
-};
-__decorate([
-    PrimaryGeneratedColumn('increment'),
-    __metadata("design:type", Number)
-], Developers.prototype, "id", void 0);
-__decorate([
-    Column(),
-    __metadata("design:type", String)
-], Developers.prototype, "name", void 0);
-__decorate([
-    Column(),
-    __metadata("design:type", String)
-], Developers.prototype, "gender", void 0);
-__decorate([
-    Column(),
-    __metadata("design:type", Number)
-], Developers.prototype, "age", void 0);
-__decorate([
-    Column(),
-    __metadata("design:type", String)
-], Developers.prototype, "hobby", void 0);
-__decorate([
-    Column(),
-    __metadata("design:type", Date)
-], Developers.prototype, "birth", void 0);
-Developers = __decorate([
-    Entity('Developers')
-], Developers);
-export default Developers;
-//# sourceMappingURL=Developers.js.map
+Object.defineProperty(exports, "__esModule", { value: true });
+var typeorm_1 = require("typeorm");
+var Developers = /** @class */ (function () {
+    function Developers() {
+    }
+    __decorate([
+        typeorm_1.PrimaryGeneratedColumn('increment'),
+        __metadata("design:type", Number)
+    ], Developers.prototype, "id", void 0);
+    __decorate([
+        typeorm_1.Column(),
+        __metadata("design:type", String)
+    ], Developers.prototype, "name", void 0);
+    __decorate([
+        typeorm_1.Column(),
+        __metadata("design:type", String)
+    ], Developers.prototype, "gender", void 0);
+    __decorate([
+        typeorm_1.Column(),
+        __metadata("design:type", Number)
+    ], Developers.prototype, "age", void 0);
+    __decorate([
+        typeorm_1.Column(),
+        __metadata("design:type", String)
+    ], Developers.prototype, "hobby", void 0);
+    __decorate([
+        typeorm_1.Column(),
+        __metadata("design:type", Date)
+    ], Developers.prototype, "birth", void 0);
+    Developers = __decorate([
+        typeorm_1.Entity('Developers')
+    ], Developers);
+    return Developers;
+}());
+exports.default = Developers;

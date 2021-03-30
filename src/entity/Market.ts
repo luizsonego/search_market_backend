@@ -1,9 +1,7 @@
 import {
   Entity,
   Column,
-  PrimaryGeneratedColumn,
-  OneToMany,
-  JoinColumn
+  PrimaryGeneratedColumn
 } from 'typeorm'
 
 @Entity('Market')

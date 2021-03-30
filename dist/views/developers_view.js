@@ -1,5 +1,7 @@
-export default {
-    render(developer) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.default = {
+    render: function (developer) {
         return {
             id: developer.id,
             name: developer.name,
@@ -9,8 +11,8 @@ export default {
             birth: developer.birth
         };
     },
-    renderMany(developers) {
-        return developers.map((developers) => this.render(developers));
+    renderMany: function (developers) {
+        var _this = this;
+        return developers.map(function (developers) { return _this.render(developers); });
     }
 };
-//# sourceMappingURL=developers_view.js.map

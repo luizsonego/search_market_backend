@@ -4,9 +4,8 @@
    "main": "src/server.ts",
    "author": "Luiz Yavorski <leesonego@gmail.com>",
    "license": "MIT",
-   "type": "module",
    "scripts": {
-      "start": "node --experimental-modules --es-module-specifier-resolution=node dist/server.js",
+      "start": "node dist/server.js",
       "dev": "ts-node-dev src/server.ts --transpile-only --ignore-watch node_modules --respawn",
       "test": "jest",
       "typeorm": "ts-node-dev ./node_modules/typeorm/cli.js"

@@ -7,7 +7,6 @@ const routes = Router()
 routes.get('/developers', DevelopersController.index)
 routes.get('/developers/:id', DevelopersController.show)
 routes.put('/developers/:id', DevelopersController.update)
-routes.delete('/developers/:id', DevelopersController.destroy)
 routes.post('/developers', DevelopersController.create)
 
 routes.post('/market', MarketController.create)

@@ -64,6 +64,8 @@ export default {
       skip: realPage,
       where: { ...params }
     }
+
+    // @ts-expect-error
     if (!params) delete findOptions.where
 
     const getQuery = () => Object.keys(params).map((key:string) => `${key}=${params[key]}`).join('&')
@@ -103,19 +105,6 @@ export default {
       ).then(resp => {
         return response.status(200).json({ name, gender, age, hobby, birth })
       })
-    } catch (error) {
-      return response.status(400).json({ message: error })
-    }
-  },
-
-  async destroy (request: Request, response: Response) {
-    const { id } = request.params
-
-    const developersRepository = getRepository(Developers)
-
-    try {
-      await developersRepository.delete(id)
-      return response.status(200).json({ message: 'deletado' })
     } catch (error) {
       return response.status(400).json({ message: error })
     }
